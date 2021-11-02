@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="nombreusuario">nombreUsuario</string>
+    <string name="login">login</string>
+    <string name="nombre">Name</string>
+    <string name="ver_foto">Ver foto</string>
+    <string name="back">back</string>
+    <string name="foto">foto</string>
+    <string name="volver">volver</string>
+</resources>

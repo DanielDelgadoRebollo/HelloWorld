@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="button1">Go</string>
+    <string name="textView2">Click me</string>
+</resources>
