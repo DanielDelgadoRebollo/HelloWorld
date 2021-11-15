@@ -36,7 +36,7 @@
         android:layout_marginBottom="10dp"
         android:drawableLeft="@android:drawable/ic_menu_call"
         android:drawablePadding="10dp"
-        android:hint="Introduce apellido"
+        android:hint="Introduce telefono"
         android:inputType="number" />
 
     <CheckBox
@@ -52,5 +52,12 @@
         android:layout_height="wrap_content"
         android:text="Pasar datos"
         android:layout_marginBottom="10dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imagenExperiencia"
+        android:src="@drawable/noex"
+        android:scaleType="fitXY"/>
 
 </LinearLayout>
