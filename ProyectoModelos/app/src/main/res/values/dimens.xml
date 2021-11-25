@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pad_gen"> 10dp</dimen>
+    <dimen name="tamanio_imagen"> 50dp</dimen>
+    <dimen name="tamanio_fila">200dp</dimen>
+</resources>

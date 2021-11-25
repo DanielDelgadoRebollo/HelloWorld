@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">новий проект</string>
+    <string name="titulo">Елементи</string>
+    <string name="seleccionar">Щоб вибрати</string>
+    <string name="deseleccionado">скасовано вибір</string>
+</resources>
