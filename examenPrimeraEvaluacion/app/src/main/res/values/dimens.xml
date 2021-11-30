@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="space_margin" type="dimen">400dp</item>
+    <item name="imagen_width" type="dimen">100dp</item>
+    <item name="imagen_height" type="dimen">100dp</item>
+    <item name="spinner_height" type="dimen">50dp</item>
+</resources>
