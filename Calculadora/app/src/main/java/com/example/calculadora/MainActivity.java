@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         instanciar();
+        accion();
     }
 
     public void instanciar(){
@@ -45,6 +46,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnBorrar = findViewById(R.id.btnBorrar);
         btnMasMenos = findViewById(R.id.btnMasMenos);
         btnIgual = findViewById(R.id.btnIgual);
+    }
+
+    public void accion(){
+        btnDos.setOnClickListener(this);
     }
 
     @Override

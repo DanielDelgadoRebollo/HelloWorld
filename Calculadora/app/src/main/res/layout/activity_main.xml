@@ -38,7 +38,7 @@
                 android:layout_marginBottom="-6sp"
                 android:layout_marginTop="-6sp"
                 android:textSize="30sp"
-                android:backgroundTint="@color/grisOscuro"
+                android:backgroundTint="@color/black"
                 android:text="AC"
                 android:id="@+id/btnBorrar"/>
             <Button
@@ -47,7 +47,7 @@
                 android:layout_weight="0.25"
                 android:layout_marginBottom="-6sp"
                 android:layout_marginTop="-6sp"
-                android:backgroundTint="@color/grisOscuro"
+                android:backgroundTint="@color/black"
                 android:textSize="20sp"
                 android:text="+/-"
                 android:id="@+id/btnMasMenos"/>
@@ -57,7 +57,7 @@
                 android:layout_weight="0.25"
                 android:layout_marginBottom="-6sp"
                 android:layout_marginTop="-6sp"
-                android:backgroundTint="@color/grisOscuro"
+                android:backgroundTint="@color/black"
                 android:textSize="20sp"
                 android:text="%"
                 android:id="@+id/btnPorcentaje"/>
