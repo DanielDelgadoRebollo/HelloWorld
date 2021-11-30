@@ -37,7 +37,7 @@
                 android:layout_marginTop="-6sp"
                 android:layout_marginBottom="-6sp"
                 android:layout_weight="0.2"
-                android:backgroundTint="@color/grisOscuro"
+                android:backgroundTint="@color/black"
                 android:text="sin"
                 android:textSize="20sp"
                 android:id="@+id/btnSin"/>
@@ -48,7 +48,7 @@
                 android:layout_marginTop="-6sp"
                 android:layout_marginBottom="-6sp"
                 android:layout_weight="0.2"
-                android:backgroundTint="@color/grisOscuro"
+                android:backgroundTint="@color/black"
                 android:text="AC"
                 android:textSize="30sp"
                 android:id="@+id/btnBorrar"/>
@@ -59,7 +59,7 @@
                 android:layout_marginTop="-6sp"
                 android:layout_marginBottom="-6sp"
                 android:layout_weight="0.2"
-                android:backgroundTint="@color/grisOscuro"
+                android:backgroundTint="@color/black"
                 android:text="+/-"
                 android:textSize="20sp"
                 android:id="@+id/btnMasMenos"/>
@@ -70,7 +70,7 @@
                 android:layout_marginTop="-6sp"
                 android:layout_marginBottom="-6sp"
                 android:layout_weight="0.2"
-                android:backgroundTint="@color/grisOscuro"
+                android:backgroundTint="@color/black"
                 android:text="%"
                 android:textSize="20sp"
                 android:id="@+id/btnPorcentaje"/>
@@ -99,7 +99,7 @@
                 android:layout_marginTop="-6sp"
                 android:layout_marginBottom="-6sp"
                 android:layout_weight="0.2"
-                android:backgroundTint="@color/grisOscuro"
+                android:backgroundTint="@color/black"
                 android:text="cos"
                 android:textSize="20sp"
                 android:id="@+id/btnCos"/>
@@ -161,7 +161,7 @@
                 android:layout_marginTop="-6sp"
                 android:layout_marginBottom="-6sp"
                 android:layout_weight="0.2"
-                android:backgroundTint="@color/grisOscuro"
+                android:backgroundTint="@color/black"
                 android:text="tan"
                 android:textSize="20sp"
                 android:id="@+id/btnTan"/>
@@ -223,7 +223,7 @@
                 android:layout_marginTop="-6sp"
                 android:layout_marginBottom="-6sp"
                 android:layout_weight="0.2"
-                android:backgroundTint="@color/grisOscuro"
+                android:backgroundTint="@color/black"
                 android:text="ln"
                 android:textSize="20sp"
                 android:id="@+id/btnLn"/>
