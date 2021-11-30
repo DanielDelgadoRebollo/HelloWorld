@@ -5,20 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:backgroundTint="@color/grisOscuro"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
+        android:layout_marginBottom="-5sp"
+        android:textColor="@color/white"
+        android:textSize="100sp"
+        android:textAlignment="textEnd"
         android:layout_height="0dp"
-        android:layout_weight="0.3" />
+        android:layout_weight="0.3"
+        />
 
     <LinearLayout
         android:id="@+id/teclas"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="0.7">
+        android:layout_weight="0.7"
+        android:background="@color/grisOscuro">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -29,33 +36,41 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:layout_marginBottom="-6sp"
+                android:layout_marginTop="-6sp"
                 android:textSize="30sp"
                 android:backgroundTint="@color/grisOscuro"
-                android:text="AC"/>
+                android:text="AC"
+                android:id="@+id/btnBorrar"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:layout_marginBottom="-6sp"
+                android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/grisOscuro"
                 android:textSize="20sp"
-                android:text="+/-"/>
+                android:text="+/-"
+                android:id="@+id/btnMasMenos"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:layout_marginBottom="-6sp"
+                android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/grisOscuro"
                 android:textSize="20sp"
-                android:text="%"/>
+                android:text="%"
+                android:id="@+id/btnPorcentaje"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_marginBottom="-6sp"
+                android:layout_marginTop="-6sp"
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/amarilloSeñales"
                 android:textSize="20sp"
-                android:text="/"/>
+                android:text="/"
+                android:id="@+id/btnDividir"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,7 +85,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/gris"
                 android:textSize="40sp"
-                android:text="7"/>
+                android:text="7"
+                android:id="@+id/btnSiete"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -79,7 +95,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/gris"
                 android:textSize="40sp"
-                android:text="8"/>
+                android:text="8"
+                android:id="@+id/btnOcho"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -88,7 +105,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/gris"
                 android:textSize="40sp"
-                android:text="9"/>
+                android:text="9"
+                android:id="@+id/btnNueve"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
@@ -97,7 +115,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/amarilloSeñales"
                 android:textSize="20sp"
-                android:text="x"/>
+                android:text="x"
+                android:id="@+id/btnMultiplicar"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,7 +131,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/gris"
                 android:textSize="40sp"
-                android:text="4"/>
+                android:text="4"
+                android:id="@+id/btnCuatro"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -121,7 +141,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/gris"
                 android:textSize="40sp"
-                android:text="5"/>
+                android:text="5"
+                android:id="@+id/btnCinco"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -130,7 +151,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/gris"
                 android:textSize="40sp"
-                android:text="6"/>
+                android:text="6"
+                android:id="@+id/btnSeis"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
@@ -139,7 +161,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/amarilloSeñales"
                 android:textSize="20sp"
-                android:text="-"/>
+                android:text="-"
+                android:id="@+id/btnResta"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -154,7 +177,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/gris"
                 android:textSize="40sp"
-                android:text="1"/>
+                android:text="1"
+                android:id="@+id/btnUno"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -163,7 +187,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/gris"
                 android:textSize="40sp"
-                android:text="2"/>
+                android:text="2"
+                android:id="@+id/btnDos"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -172,7 +197,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/gris"
                 android:textSize="40sp"
-                android:text="3"/>
+                android:text="3"
+                android:id="@+id/btnTres"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
@@ -181,7 +207,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/amarilloSeñales"
                 android:textSize="20sp"
-                android:text="+"/>
+                android:text="+"
+                android:id="@+id/btnSuma"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -196,7 +223,8 @@
                 android:layout_marginTop="-6sp"
                 android:backgroundTint="@color/gris"
                 android:textSize="40sp"
-                android:text="0"/>
+                android:text="0"
+                android:id="@+id/btnCero"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -205,7 +233,8 @@
                 android:layout_marginBottom="-6sp"
                 android:layout_marginTop="-6sp"
                 android:textSize="40sp"
-                android:text=","/>
+                android:text=","
+                android:id="@+id/btnComa"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -214,7 +243,8 @@
                 android:layout_marginBottom="-6sp"
                 android:layout_marginTop="-6sp"
                 android:textSize="40sp"
-                android:text="="/>
+                android:text="="
+                android:id="@+id/btnIgual"/>
 
         </LinearLayout>
 
