@@ -15,7 +15,7 @@
         android:layout_marginBottom="-5sp"
         android:layout_weight="0.2"
         android:textAlignment="textEnd"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="50sp" />
 
     <LinearLayout

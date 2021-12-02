@@ -3,6 +3,7 @@ package com.example.calculadora;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ,btnSin,btnCos,btnTan,btnLn;
     int valorUno = 0, valorDos = 0;
     char c = 'a';
+    private Double varAux, resultadoDouble;
 
 
     @Override
@@ -24,6 +26,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         instanciar();
         accion();
+
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            accionesHorizontal();
+        }
+    }
+
+
+        public void accionesHorizontal() {
+            btnSin.setOnClickListener(this);
+            btnCos.setOnClickListener(this);
+            btnTan.setOnClickListener(this);
+            btnLn.setOnClickListener(this);
     }
 
     public void instanciar() {
@@ -50,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSin = findViewById(R.id.btnSin);
         btnCos = findViewById(R.id.btnCos);
         btnTan = findViewById(R.id.btnTan);
-        btnLn = findViewById(R.id.btnTan);
+        btnLn = findViewById(R.id.btnLn);
 
     }
 
@@ -71,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDivision.setOnClickListener(this);
         btnBorrar.setOnClickListener(this);
         btnIgual.setOnClickListener(this);
+
     }
 
     @Override
@@ -146,24 +161,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                     break;
             case R.id.btnSin:
-                if (textView.getText()!=null){
-                    Math.sin(Double.parseDouble(String.valueOf(textView.getText())));
-                }
+                varAux = Double.parseDouble(textView.getText().toString());
+                resultadoDouble = Math.sin(varAux);
+                double redondear = Math.round(resultadoDouble * 1000.0) / 1000.0;
+                textView.setText(redondear + "");
                 break;
             case R.id.btnCos:
-                if (textView.getText()!=null){
-                    Math.cos(Double.parseDouble(String.valueOf(textView.getText())));
-                }
+                varAux = Double.parseDouble(textView.getText().toString());
+                resultadoDouble = Math.cos(varAux);
+               redondear = Math.round(resultadoDouble * 1000.0) / 1000.0;
+                textView.setText(redondear + "");
                 break;
             case R.id.btnLn:
-                if (textView.getText()!=null){
-                    Math.log(Double.parseDouble(String.valueOf(textView.getText())));
-                }
+                varAux = Double.parseDouble(textView.getText().toString());
+                resultadoDouble = Math.log(varAux);
+                redondear = Math.round(resultadoDouble * 1000.0) / 1000.0;
+                textView.setText(redondear + "");
                 break;
             case R.id.btnTan:
-                if (textView.getText()!=null){
-                    Math.tan(Double.parseDouble(String.valueOf(textView.getText())));
-                }
+                varAux = Double.parseDouble(textView.getText().toString());
+                resultadoDouble = Math.tan(varAux);
+                redondear = Math.round(resultadoDouble * 1000.0) / 1000.0;
+                textView.setText(redondear + "");
+
                 break;
         }
     }
