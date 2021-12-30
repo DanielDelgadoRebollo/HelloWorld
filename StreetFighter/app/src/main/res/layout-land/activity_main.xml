@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout tools2:ignore="MissingDefaultResource"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools2="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/fondo_dialogo"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        />
+
+    <TextView
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Press start"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:id="@+id/editTexto_inicio"
+        />
+
+</LinearLayout>
