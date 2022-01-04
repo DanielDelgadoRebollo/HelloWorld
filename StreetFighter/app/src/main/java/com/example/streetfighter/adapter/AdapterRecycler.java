@@ -76,6 +76,6 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.myHold
 
     public interface OnPersonajeRecycler{
          public void onPersonajeSelected(Personaje personaje);
-         public void onPersonajeInformacion(Personaje perosnaje);
+         public void onPersonajeInformacion(Personaje personaje);
     }
 }

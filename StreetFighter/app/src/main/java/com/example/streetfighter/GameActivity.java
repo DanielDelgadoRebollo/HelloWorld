@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -15,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.streetfighter.adapter.AdapterRecycler;
+import com.example.streetfighter.dialog.DialogoPersonalizado;
 import com.example.streetfighter.utils.Personaje;
 
 import java.util.ArrayList;
@@ -24,6 +26,7 @@ public class GameActivity extends AppCompatActivity implements AdapterRecycler.O
     private ArrayList<Personaje> listaPersonajes;
     private AdapterRecycler adapterRecycler;
     private ImageView imageView1,imageView2;
+    private Drawable imagenAux;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +39,11 @@ public class GameActivity extends AppCompatActivity implements AdapterRecycler.O
 
     public void instancias() {
         recyclerView = findViewById(R.id.recyclerView);
-        imageView1 = findViewById(R.id.imageView1);
-        imageView2 = findViewById(R.id.imageView2);
+        imageView1 = findViewById(R.id.imageViewPlayer1);
+        imageView2 = findViewById(R.id.imageViewPlayer2);
         listaPersonajes = new ArrayList<>();
         adapterRecycler = new AdapterRecycler(listaPersonajes, GameActivity.this);
+        imageView2.setScaleX(-1);
     }
 
     public void rellenarListas() {
@@ -77,10 +81,25 @@ public class GameActivity extends AppCompatActivity implements AdapterRecycler.O
 
     @Override
     public void onPersonajeSelected(Personaje personaje) {
+
+        if (imageView1.getDrawable()==null) {
+            imageView1.setImageResource(personaje.getImagen());
+        } else if (imageView2.getDrawable()==null){
+            imageView2.setImageResource(personaje.getImagen());
+        } else if(imageView1.getDrawable()!=null && imageView2.getDrawable()!=null){
+            imagenAux = imageView1.getDrawable();
+            imageView1.setImageResource(personaje.getImagen());
+            imageView2.setImageDrawable(imagenAux);
+        }
+
+
+
     }
 
     @Override
-    public void onPersonajeInformacion(Personaje perosnaje) {
+    public void onPersonajeInformacion(Personaje personaje) {
 
+        DialogoPersonalizado dialogoPersonalizado = DialogoPersonalizado.newInstance(personaje.getImagen(),personaje.getNombre(),personaje.getPoder());
+        dialogoPersonalizado.show(getSupportFragmentManager(),"personalizado");
     }
 }

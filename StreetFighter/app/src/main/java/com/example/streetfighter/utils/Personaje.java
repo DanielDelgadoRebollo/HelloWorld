@@ -26,6 +26,22 @@ public class Personaje {
         this.nombre = nombre;
     }
 
+    public String getPoder() {
+        return poder;
+    }
+
+    public void setPoder(String poder) {
+        this.poder = poder;
+    }
+
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+
     public int getImagen() {
         return imagen;
     }
