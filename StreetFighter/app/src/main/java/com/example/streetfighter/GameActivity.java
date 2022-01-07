@@ -5,11 +5,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.app.Person;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -17,9 +22,12 @@ import android.widget.TextView;
 
 import com.example.streetfighter.adapter.AdapterRecycler;
 import com.example.streetfighter.dialog.DialogoPersonalizado;
+import com.example.streetfighter.dialog.DialogoPersonalizadoLucha;
 import com.example.streetfighter.utils.Personaje;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GameActivity extends AppCompatActivity implements AdapterRecycler.OnPersonajeRecycler {
     private RecyclerView recyclerView;
@@ -27,6 +35,8 @@ public class GameActivity extends AppCompatActivity implements AdapterRecycler.O
     private AdapterRecycler adapterRecycler;
     private ImageView imageView1,imageView2;
     private Drawable imagenAux;
+    private Button boton1;
+    private ArrayList<Personaje> listaPersonajesLucha = new ArrayList<Personaje>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +45,14 @@ public class GameActivity extends AppCompatActivity implements AdapterRecycler.O
         instancias();
         rellenarListas();
         asociarElementos();
+        acciones();
     }
 
     public void instancias() {
         recyclerView = findViewById(R.id.recyclerView);
         imageView1 = findViewById(R.id.imageViewPlayer1);
         imageView2 = findViewById(R.id.imageViewPlayer2);
+        boton1 = findViewById(R.id.botonJugar);
         listaPersonajes = new ArrayList<>();
         adapterRecycler = new AdapterRecycler(listaPersonajes, GameActivity.this);
         imageView2.setScaleX(-1);
@@ -93,13 +105,40 @@ public class GameActivity extends AppCompatActivity implements AdapterRecycler.O
         }
 
 
+        listaPersonajesLucha.add(personaje);
+
+
+
 
     }
 
     @Override
     public void onPersonajeInformacion(Personaje personaje) {
-
         DialogoPersonalizado dialogoPersonalizado = DialogoPersonalizado.newInstance(personaje.getImagen(),personaje.getNombre(),personaje.getPoder());
         dialogoPersonalizado.show(getSupportFragmentManager(),"personalizado");
     }
+
+    public void acciones() {
+        boton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogoPersonalizadoLucha dialogoPersonalizadoLucha = DialogoPersonalizadoLucha.newInstance(listaPersonajesLucha.get(0).getImagen(), listaPersonajesLucha.get(1).getImagen());
+                dialogoPersonalizadoLucha.show(getSupportFragmentManager(), "personalizado2");
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(getApplicationContext(), FightActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                }, 2000);
+
+            }
+        });
+    }
+
+
+
+
 }
