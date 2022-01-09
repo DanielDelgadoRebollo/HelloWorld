@@ -1,6 +1,8 @@
 package com.example.streetfighter.utils;
 
-public class Personaje {
+import java.io.Serializable;
+
+public class Personaje implements Serializable {
     private String nombre,poder,nacionalidad;
     private int imagen,escenario,imagenPerder;
 

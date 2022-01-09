@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import com.example.streetfighter.R;
+import com.example.streetfighter.utils.Personaje;
 
 public class DialogoPersonalizadoLucha extends DialogFragment {
     private Context context;
@@ -36,14 +37,14 @@ public class DialogoPersonalizadoLucha extends DialogFragment {
         DialogoPersonalizadoLucha dialogoPersonalizadoLucha = new DialogoPersonalizadoLucha();
         Bundle bundle = new Bundle();
         bundle.putInt("Imagen1",imagen1);
-        bundle.putInt("Imagen1",imagen2);
+        bundle.putInt("Imagen2",imagen2);
         dialogoPersonalizadoLucha.setArguments(bundle);
         return dialogoPersonalizadoLucha;
     }
 
     public void instancias(){
-        imageView1 = view.findViewById(R.id.imageViewPlayer1);
-        imageView2 = view.findViewById(R.id.imageViewPlayer2);
+        imageView1 = view.findViewById(R.id.imagenPlayerUno);
+        imageView2 = view.findViewById(R.id.imagenPlayerDos);
     }
 
     @Override
@@ -55,7 +56,8 @@ public class DialogoPersonalizadoLucha extends DialogFragment {
     }
 
     public void acciones(){
-        imageView1.setImageAlpha(imagen1);
-        imageView2.setImageAlpha(imagen2);
+        imageView1.setImageResource(imagen1);
+        imageView2.setScaleX(-1);
+        imageView2.setImageResource(imagen2);
     }
 }

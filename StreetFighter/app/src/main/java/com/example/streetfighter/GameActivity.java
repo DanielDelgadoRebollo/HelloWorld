@@ -36,7 +36,7 @@ public class GameActivity extends AppCompatActivity implements AdapterRecycler.O
     private ImageView imageView1,imageView2;
     private Drawable imagenAux;
     private Button boton1;
-    private ArrayList<Personaje> listaPersonajesLucha = new ArrayList<Personaje>();
+    private ArrayList<Personaje> listaPersonajesLucha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,7 @@ public class GameActivity extends AppCompatActivity implements AdapterRecycler.O
         imageView2 = findViewById(R.id.imageViewPlayer2);
         boton1 = findViewById(R.id.botonJugar);
         listaPersonajes = new ArrayList<>();
+        listaPersonajesLucha = new ArrayList<>();
         adapterRecycler = new AdapterRecycler(listaPersonajes, GameActivity.this);
         imageView2.setScaleX(-1);
     }
@@ -96,16 +97,20 @@ public class GameActivity extends AppCompatActivity implements AdapterRecycler.O
 
         if (imageView1.getDrawable()==null) {
             imageView1.setImageResource(personaje.getImagen());
+            listaPersonajesLucha.add(personaje);
         } else if (imageView2.getDrawable()==null){
             imageView2.setImageResource(personaje.getImagen());
+            listaPersonajesLucha.add(personaje);
         } else if(imageView1.getDrawable()!=null && imageView2.getDrawable()!=null){
             imagenAux = imageView1.getDrawable();
             imageView1.setImageResource(personaje.getImagen());
             imageView2.setImageDrawable(imagenAux);
+            listaPersonajesLucha.remove(1);
+            listaPersonajesLucha.add(0,personaje);
         }
 
 
-        listaPersonajesLucha.add(personaje);
+
 
 
 
@@ -129,6 +134,8 @@ public class GameActivity extends AppCompatActivity implements AdapterRecycler.O
                     @Override
                     public void run() {
                         Intent intent = new Intent(getApplicationContext(), FightActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("Personaje",listaPersonajesLucha.get(0));
                         startActivity(intent);
                         finish();
                     }
