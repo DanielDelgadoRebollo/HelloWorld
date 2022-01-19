@@ -11,13 +11,16 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.fragmentsjson.adapter.RecyclerAdapter;
 import com.example.fragmentsjson.fragments.FragmentActivity;
+import com.example.fragmentsjson.fragments.FragmentDetalle;
+import com.example.fragmentsjson.utils.Equipo;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RecyclerAdapter.OnEquipoListener {
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
@@ -62,5 +65,14 @@ public class MainActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onEquipoSelected(Equipo equipo) {
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.sitioFragments,FragmentDetalle.newInstance(equipo));
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }
