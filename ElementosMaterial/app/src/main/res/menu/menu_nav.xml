@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Opcion1" android:icon="@android:drawable/alert_dark_frame"
+        android:id="@+id/menu_nav_op1"
+        app:showAsAction="always"
+        />
+    <group>
+        <item android:title="Opcion 2" android:id="@+id/menu_nav_op2" android:icon="@android:drawable/alert_light_frame"></item>
+        <item android:title="Opcion 3" android:id="@+id/menu_nav_op3"></item>
+
+    </group>
+
+<item android:title="Navegacion">
+    <menu>
+        <item android:title="Framgent 1" android:icon="@android:drawable/ic_dialog_email"></item>
+        <item android:title="Fragment 2" android:icon="@android:drawable/ic_dialog_alert"></item>
+    </menu>
+
+</item>
+
+
+</menu>
