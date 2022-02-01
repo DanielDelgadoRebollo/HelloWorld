@@ -14,8 +14,8 @@
 
 <item android:title="Navegacion">
     <menu>
-        <item android:title="Framgent 1" android:icon="@android:drawable/ic_dialog_email"></item>
-        <item android:title="Fragment 2" android:icon="@android:drawable/ic_dialog_alert"></item>
+        <item android:title="Framgent 1" android:id="@+id/menu_nav_fragment1" android:icon="@android:drawable/ic_dialog_email"></item>
+        <item android:title="Fragment 2" android:id="@+id/menu_nav_fragment2" android:icon="@android:drawable/ic_dialog_alert"></item>
     </menu>
 
 </item>
