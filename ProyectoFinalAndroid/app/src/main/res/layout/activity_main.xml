@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/fondocesped"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="¡Bienvenido!"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduce usuario"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:drawableLeft="@drawable/usuario"
+        android:drawableTint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de usuario"
+        android:layout_margin="30dp"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textColorHint="@color/white"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduce contraseña"
+        android:layout_margin="30dp"
+        android:drawableLeft="@drawable/padlock"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:drawableTint="@color/white"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textColorHint="@color/white"
+        android:layout_margin="30dp"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Iniciar Sesion"
+            android:id="@+id/botonIniciarSesion"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Registrar Usuario"
+            android:id="@+id/botonRegistrarUsuario"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
