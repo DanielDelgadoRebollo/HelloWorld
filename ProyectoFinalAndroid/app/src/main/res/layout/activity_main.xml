@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Introduce usuario"
-        android:layout_margin="30dp"
+        android:layout_margin="20dp"
         android:gravity="center"
         android:drawableLeft="@drawable/usuario"
         android:drawableTint="@color/white"
@@ -35,17 +35,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombre de usuario"
-        android:layout_margin="30dp"
+        android:layout_margin="20dp"
         android:textColor="@color/white"
         android:textSize="25dp"
         android:textColorHint="@color/white"
+        android:id="@+id/editTextUsuario"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Introduce contraseña"
-        android:layout_margin="30dp"
+        android:layout_margin="20dp"
         android:drawableLeft="@drawable/padlock"
         android:gravity="center"
         android:textColor="@color/white"
@@ -58,9 +59,10 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:textColorHint="@color/white"
-        android:layout_margin="30dp"
+        android:layout_margin="20dp"
         android:textColor="@color/white"
         android:textSize="25dp"
+        android:id="@+id/editTextPassword"
         />
 
     <LinearLayout
