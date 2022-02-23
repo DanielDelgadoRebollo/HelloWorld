@@ -60,13 +60,13 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            Toast.makeText(getApplicationContext(),"Bienvenido"+editTextUsuario.getText().toString(),Toast.LENGTH_LONG);
+                            Toast.makeText(getApplicationContext(),"Bienvenido "+editTextUsuario.getText().toString(),Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), InicioSesion.class);
                             intent.putExtra("Usuario",editTextUsuario.getText().toString());
                             startActivity(intent);
                             finish();
                         } else {
-                            Toast.makeText(getApplicationContext(), "Usuario no encontrado", Toast.LENGTH_LONG);
+                            Toast.makeText(getApplicationContext(), "Usuario no encontrado", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
