@@ -68,10 +68,11 @@ public class InicioSesion extends AppCompatActivity {
         //textView.setText(String.valueOf(valor.charAt(0)));
         //Log.v("valor", String.valueOf(valor.charAt(0)));
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 String urlSpain ="https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?s=Soccer&c=Spain";
                 String urlFrance ="https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?s=Soccer&c=France";
                 String urlEngland ="https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?s=Soccer&c=England";
@@ -79,21 +80,20 @@ public class InicioSesion extends AppCompatActivity {
                     case R.id.menu_nav_espania:
                         Toast.makeText(getApplicationContext(),"España", Toast.LENGTH_LONG).show();
                         fragmentTransaction.replace(R.id.sitio_fragment,FragmentEquipos.newInstance(urlSpain));
-                        fragmentTransaction.commit();
                         break;
                     case R.id.menu_nav_francia:
                         Toast.makeText(getApplicationContext(),"Francia", Toast.LENGTH_LONG).show();
                         fragmentTransaction.replace(R.id.sitio_fragment,FragmentEquipos.newInstance(urlFrance));
-                        fragmentTransaction.commit();
                         break;
                     case R.id.menu_nav_inglaterra:
                         Toast.makeText(getApplicationContext(),"Inglaterra", Toast.LENGTH_LONG).show();
                         fragmentTransaction.replace(R.id.sitio_fragment,FragmentEquipos.newInstance(urlEngland));
-                        fragmentTransaction.commit();
                         break;
                 }
 
                 drawerLayout.closeDrawer(GravityCompat.START);
+
+                fragmentTransaction.commit();
                 return true;
             }
         });

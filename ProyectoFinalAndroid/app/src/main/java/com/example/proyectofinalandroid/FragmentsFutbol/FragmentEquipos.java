@@ -1,5 +1,6 @@
 package com.example.proyectofinalandroid.FragmentsFutbol;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -49,6 +50,12 @@ public class FragmentEquipos extends Fragment {
         instancias();
         asociarDatos();
         realizarPeticion();
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        
     }
 
     private void instancias() {
