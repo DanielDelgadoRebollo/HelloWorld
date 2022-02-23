@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="España"
+        android:icon="@drawable/spain"
+        android:id="@+id/menu_nav_espania"
+        />
+
+    <group>
+        <item android:title="Francia"
+            android:id="@+id/menu_nav_francia"
+            android:icon="@drawable/france"
+            ></item>
+        <item android:title="Inglaterra"
+            android:id="@+id/menu_nav_inglaterra"
+            android:icon="@drawable/england"
+            ></item>
+
+    </group>
+
+</menu>
