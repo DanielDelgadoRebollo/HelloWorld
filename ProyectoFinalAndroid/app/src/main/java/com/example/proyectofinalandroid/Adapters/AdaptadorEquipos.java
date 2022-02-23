@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.proyectofinalandroid.R;
 import com.example.proyectofinalandroid.utils.Equipo;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -23,6 +24,7 @@ public class AdaptadorEquipos extends RecyclerView.Adapter<AdaptadorEquipos.MyHo
     public AdaptadorEquipos(Context context){
         this.listaEquipos = new ArrayList<>();
         this.context= context;
+        setHasStableIds(true);
     }
 
     @NonNull
@@ -42,6 +44,7 @@ public class AdaptadorEquipos extends RecyclerView.Adapter<AdaptadorEquipos.MyHo
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
         Equipo equipoActual = listaEquipos.get(position);
         holder.textView.setText(equipoActual.getNombreEquipo());
+        Picasso.get().load(equipoActual.getImagen()).into(holder.imageView);
 
 
     }

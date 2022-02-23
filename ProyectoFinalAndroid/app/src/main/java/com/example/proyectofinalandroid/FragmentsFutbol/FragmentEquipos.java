@@ -48,7 +48,6 @@ public class FragmentEquipos extends Fragment {
     public void onStart() {
         super.onStart();
         instancias();
-        asociarDatos();
         realizarPeticion();
     }
 
@@ -61,6 +60,8 @@ public class FragmentEquipos extends Fragment {
     private void instancias() {
         recyclerView = view.findViewById(R.id.recyclerEquipos);
         adaptadorEquipos = new AdaptadorEquipos(getContext());
+        recyclerView.setAdapter(adaptadorEquipos);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),recyclerView.VERTICAL,false));
 
     }
 
@@ -83,7 +84,6 @@ public class FragmentEquipos extends Fragment {
                 String nombre = equipo.getString("strTeam");
                 Equipo equipoAgregar = new Equipo(imagen,nombre);
                 adaptadorEquipos.agregarEquipo(equipoAgregar);
-
             }
 
 
@@ -120,8 +120,5 @@ public class FragmentEquipos extends Fragment {
 
     }
 
-    public void asociarDatos(){
-        recyclerView.setAdapter(adaptadorEquipos);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),recyclerView.VERTICAL,false));
-    }
+
 }

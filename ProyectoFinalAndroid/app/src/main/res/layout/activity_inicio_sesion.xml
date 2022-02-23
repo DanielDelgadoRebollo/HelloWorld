@@ -11,10 +11,10 @@
     android:id="@+id/drawer_layout"
     >
 
-    <include layout="@layout/main_content"></include>
+    <include layout="@layout/main_content" />
 
     <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/navigation_view"
         android:layout_gravity="start"
